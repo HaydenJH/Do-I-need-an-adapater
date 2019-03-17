@@ -2331,7 +2331,7 @@ export function getPlugType(country) {
     if (countryData === null) {
         return "";
     }
-    return countryData.plugTypes.replace(' ', '').split(',');
+    return countryData.plugTypes.split(", ");
 }
 
 export function getPlugTypeClass(plugLetter) {

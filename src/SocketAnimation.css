@@ -35,7 +35,8 @@
 
 .first-hole,
 .second-hole,
-.third-hole {
+.third-hole,
+.fourth-hole {
     transition: all 0.3s ease-in-out;
     --hole-border: 2px solid #282c34;
     position: absolute;
@@ -162,7 +163,47 @@
     top: 45px;
 }
 
-/*todo F */
+/* Type F */
+.type-f .first-hole, .type-f .second-hole, .type-f .third-hole, .type-f .fourth-hole {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: var(--hole-border);
+    left: 55px;
+    top: 135px;
+}
+
+.type-f .first-hole {
+    left: 55px;
+    top: 131px;
+}
+
+.type-f .second-hole {
+    left: 211px;
+    top: 131px;
+}
+
+.type-f .third-hole {
+    left: 138px;
+    top: -1px;
+    width: 20px;
+    height: 25px;
+    border-radius: 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #282c34;
+}
+
+.type-f .fourth-hole {
+    left: 138px;
+    top: 271px;
+    width: 20px;
+    height: 25px;
+    border-radius: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: #282c34;
+}
 
 /* Type G */
 .type-g .first-hole, .type-g .second-hole, .type-g .third-hole {
