@@ -57,12 +57,12 @@ class App extends Component {
       return;
     }
 
-    let compatableSockets = getCountryCompatibleSockets(selectedFromCountry, selectedToCountry);
-    console.debug(compatableSockets);
-    if(compatableSockets.length > 0){
-      this.setState({isAdapterNeeded: "Yes"});
-    } else {
+    let compatibleSockets = getCountryCompatibleSockets(selectedFromCountry, selectedToCountry);
+    console.debug(compatibleSockets);
+    if(compatibleSockets.length > 0){
       this.setState({isAdapterNeeded: "No"});
+    } else {
+      this.setState({isAdapterNeeded: "Yes"});
     }
   }
 
@@ -74,7 +74,7 @@ class App extends Component {
       fromPlugType: selectedPlugType,
       fromPlugTypes: plugTypes
     });
-    this.checkCountriesHaveComptabilePlugs();
+    this.checkCountriesHaveComptabilePlugs(selectedFromCountry, this.state.selectedToCountry);
   }
 
   handleToCountryChange = (selectedToCountry) => {
@@ -85,7 +85,7 @@ class App extends Component {
       toPlugType: selectedPlugType,
       toPlugTypes: plugTypes
     });
-    this.checkCountriesHaveComptabilePlugs();
+    this.checkCountriesHaveComptabilePlugs(this.state.selectedFromCountry, selectedToCountry);
   }
   
   onFromPlugTypeClicked = (type) =>{

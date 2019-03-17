@@ -2339,8 +2339,8 @@ export function getPlugTypeClass(plugLetter) {
 }
 
 export function getCountryCompatibleSockets(countryOne, countryTwo) {
-    let countryOnePlugTypes = plugLookup.find(p => p.country === countryOne.value).plugTypes;
-    let countryTwoSockets = plugLookup.find(p => p.country === countryTwo.value).plugTypes;
+    let countryOnePlugTypes = getPlugType(countryOne);
+    let countryTwoSockets = getPlugType(countryTwo);
     
     let compatiblePlugs = [];
     for (let plugType of countryOnePlugTypes) {
@@ -2356,6 +2356,8 @@ export function getCountryCompatibleSockets(countryOne, countryTwo) {
             compatiblePlugs.push(plugData);
         }
     }
+
+    return compatiblePlugs;
 }
 
 function getCompatibleSocketsForPlug(plugType) {
