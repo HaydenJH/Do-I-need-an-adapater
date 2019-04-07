@@ -31,15 +31,21 @@
   justify-content: center;
 }
 
+
+@media (max-width: 800px) {
+  .Selection-panel-wrapper {
+      flex-direction: column; 
+  }
+}
+
 .country-selector{
   max-width: 400px;
 }
 
 .no-adapter {
-  color: #3ee33e;
+  color: #00e676;
 }
 
 .yes-adapter {
-  color: #df2c2c;
+  color: #f44336;
 }
-

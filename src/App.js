@@ -64,7 +64,6 @@ class App extends Component {
     }
     let caveat = "When using plug(s) of type: ";
     let compatibleSockets = getCountryCompatibleSockets(selectedFromCountry, selectedToCountry);
-    console.debug(compatibleSockets)
     if(compatibleSockets.length > 0) {
       caveat = caveat + compatibleSockets.map(e => e.plug).join(", ");
       this.setState({
@@ -100,7 +99,7 @@ class App extends Component {
     });
     this.checkCountriesHaveComptablePlugs(this.state.selectedFromCountry, selectedToCountry);
   }
-  
+
   onFromPlugTypeClicked = (type) =>{
     this.setState({
       fromPlugType: type,
