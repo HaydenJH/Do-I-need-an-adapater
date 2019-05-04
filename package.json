@@ -2,7 +2,7 @@
   "name": "power-socket-comparer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://haydenjh.github.io/Do-I-need-an-adapater.git",
+  "homepage": "https://haydenjh.github.io/Do-I-need-an-adapater",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "gh-pages": "^2.0.1",
@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
